@@ -3,7 +3,8 @@
 
     </head>
     <body>
-        <h1>Setuptourist</h1>
+        <h1>Save Youtubers</h1>
+        <p>A simple web add to save your favourite youtube channels.</p>
 
         <h4>Add a new creator</h4>
         <input class="channel-input" type="text" placeholder="paste YouTube url" />
@@ -44,10 +45,13 @@
                     const card = newEl('div', {class: 'card'});
                     const title = newEl('h4', {innerText: creator.name});
                     const img = newEl('img', {src: creator.img});
-                    img.style.width = '100px';
+                    const button = newEl('p', {src: creator.ytURL})
+
                     card.appendChild(title);
                     card.appendChild(img);
+                    card.appentChild(button)
                     ctr.appendChild(card);
+
                 })
             }
 
